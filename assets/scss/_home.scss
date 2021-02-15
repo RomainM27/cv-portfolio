@@ -1,0 +1,37 @@
+#home {
+    width: 100vw;
+    height: 300vh;
+    overflow: hidden;
+    .home__image{
+        height: 40rem;
+        background-image: url("../images/main.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .home__content{
+        margin: 3.2rem;
+        .h1-title{
+            font-size: 4rem;
+            line-height: 4.2rem;
+            letter-spacing: -0.36px;
+            font-weight: bold;
+            font-family: 'Ibarra Real Nova', serif;
+            color: $M1;
+        }
+        button{
+            background-color: #203A4c;
+            color: white;
+            margin-top: 4rem;
+            padding:1.5rem 3rem;
+            outline: none;
+            border: hidden;
+            cursor: pointer;
+            &:hover{
+                background-color: #5fb4a2;
+                transition: 1s;
+            }
+            
+        }
+    }
+}

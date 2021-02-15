@@ -1,0 +1,288 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: normal;
+  font-family: 'Public Sans', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  margin: 0 3.2rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 3.2rem;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+header.sticky {
+  padding: 1rem 5rem;
+  background-color: #33323d;
+}
+
+header nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav div {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+header nav ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li {
+  position: relative;
+  list-style-type: none;
+  font-size: 1.6rem;
+}
+
+header nav ul li a {
+  position: relative;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.hamburger-button {
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #33323d;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.hamburger-button:hover {
+  background-color: #201d3a;
+}
+
+.hamburger-button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.hamburger-button .icon {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.hamburger-button .icon i {
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  animation-direction: reverse;
+}
+
+.hamburger-button.active .icon i {
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.hamburger-button .icon i:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.hamburger-button .icon i:nth-child(2) {
+  right: 0;
+  bottom: 0;
+}
+
+.hamburger-button .icon i:nth-child(3),
+.hamburger-button .icon i:nth-child(4) {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hamburger-button.animation .icon i:nth-child(1),
+.hamburger-button.animation .icon i:nth-child(2) {
+  -webkit-animation-name: LineHide;
+          animation-name: LineHide;
+}
+
+.hamburger-button.animation .icon i:nth-child(3) {
+  -webkit-animation-name: ScaleChange, Clockwise;
+          animation-name: ScaleChange, Clockwise;
+}
+
+.hamburger-button.animation .icon i:nth-child(4) {
+  -webkit-animation-name: ScaleChange, Counterclockwise;
+          animation-name: ScaleChange, Counterclockwise;
+}
+
+@-webkit-keyframes LineHide {
+  0% {
+    width: 24px;
+    opacity: 1;
+  }
+  50%, 100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes LineHide {
+  0% {
+    width: 24px;
+    opacity: 1;
+  }
+  50%, 100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes ScaleChange {
+  0% {
+    width: 24px;
+  }
+  50%, 100% {
+    width: 32px;
+  }
+}
+
+@keyframes ScaleChange {
+  0% {
+    width: 24px;
+  }
+  50%, 100% {
+    width: 32px;
+  }
+}
+
+@-webkit-keyframes Clockwise {
+  0%, 50% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes Clockwise {
+  0%, 50% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@-webkit-keyframes Counterclockwise {
+  0%, 50% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@keyframes Counterclockwise {
+  0%, 50% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+#home {
+  width: 100vw;
+  height: 300vh;
+  overflow: hidden;
+}
+
+#home .home__image {
+  height: 40rem;
+  background-image: url("../images/main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#home .home__content {
+  margin: 3.2rem;
+}
+
+#home .home__content .h1-title {
+  font-size: 4rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.36px;
+  font-weight: bold;
+  font-family: 'Ibarra Real Nova', serif;
+  color: #33323d;
+}
+
+#home .home__content button {
+  background-color: #203A4c;
+  color: white;
+  margin-top: 4rem;
+  padding: 1.5rem 3rem;
+  outline: none;
+  border: hidden;
+  cursor: pointer;
+}
+
+#home .home__content button:hover {
+  background-color: #5fb4a2;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+/*# sourceMappingURL=style.css.map */
