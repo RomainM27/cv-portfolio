@@ -1,13 +1,12 @@
 #home {
     width: 100vw;
     height: 300vh;
-    overflow: hidden;
+
     .home__image{
         height: 40rem;
         background-image: url("../images/main.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        overflow: hidden;
     }
     .home__content{
         margin: 3.2rem;
@@ -20,7 +19,7 @@
             color: $M1;
         }
         button{
-            background-color: #203A4c;
+            background-color: $M2;
             color: white;
             margin-top: 4rem;
             padding:1.5rem 3rem;
@@ -28,7 +27,7 @@
             border: hidden;
             cursor: pointer;
             &:hover{
-                background-color: #5fb4a2;
+                background-color: $M3;
                 transition: 1s;
             }
             

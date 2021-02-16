@@ -4,7 +4,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
     padding: 3.2rem;
     transition: 0.6s;
     &.sticky {
@@ -22,6 +22,7 @@ header {
             position: relative;
             font-size: 2rem;
             font-weight: bolder;
+            color: white;
 
         }
         ul{
@@ -29,6 +30,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+            display: none;
             li {
                 position: relative;
                 list-style-type: none;
@@ -42,6 +44,45 @@ header {
 
     }
 }
+// mobile menu
+.mobile{
+    z-index: 200;
+    position: fixed;
+    top: 10%; right: 5%;
+    margin: 0 2rem;
+    transition: 0.6s ease;
+    li{
+        list-style-type: none;
+        padding: 1.6rem 0;
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            &:hover{
+                font-weight: bold;
+            }
+        }
+    }
+}
+.mobile_menu-bg{
+    z-index: 150;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    margin: 2rem;
+    background: radial-gradient(circle,$M1,$M1);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+.mobile_menu-bg-open{
+    width: 50rem;
+    height: 55rem;
+    transform: translate(60%,-25%);
+}
+
+
 
 .hidden {
     display: none;
