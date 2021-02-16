@@ -7,41 +7,51 @@ header {
     z-index: 1000;
     padding: 3.2rem;
     transition: 0.6s;
+    @include sm{
+        padding: 3.2rem 10% 3.2rem 10%;
+    }
     &.sticky {
         padding: 1rem 5rem;
         background-color: $M1;
+        @include sm{
+            padding: 1rem 10% 1rem 10%;
+        }
     }
     nav{
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
-
-        div {
+        .logo__header {
             position: relative;
-            font-size: 2rem;
-            font-weight: bolder;
-            color: white;
-
         }
         ul{
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             display: none;
+            @include xl{
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             li {
                 position: relative;
                 list-style-type: none;
                 font-size: 1.6rem;
+                margin-right: 3rem;
+                width: 8rem;
                 a{
                     position: relative;
+                    color: white;
                     text-decoration: none;
+                    font-size: 2rem;
+                    text-shadow: 0 0 10px rgba(0,0,0, 0.8);
+                    &:hover{
+                        font-weight: bold;
+                    }
                 }
             }
         }
-
     }
 }
 // mobile menu
@@ -54,6 +64,7 @@ header {
     li{
         list-style-type: none;
         padding: 1.6rem 0;
+        width: 8rem;
         a{
             color: white;
             text-decoration: none;
@@ -82,8 +93,12 @@ header {
     transform: translate(60%,-25%);
 }
 
-
-
 .hidden {
     display: none;
+}
+
+// class for the logo
+.white {
+    fill: white;
+    transition: 0.6s;
 }

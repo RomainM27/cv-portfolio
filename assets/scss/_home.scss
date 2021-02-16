@@ -1,15 +1,38 @@
 #home {
-    width: 100vw;
-    height: 300vh;
+
 
     .home__image{
         height: 40rem;
         background-image: url("../images/main.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        @include sm{
+            height: 70rem;
+        }
+        @include xl{
+            height: 100vh;
+        }
     }
     .home__content{
         margin: 3.2rem;
+        @include sm{
+           position: absolute;
+           margin: 0;
+           padding: 2.8rem 0 0 2.8rem;
+           background-color: white;
+           right: 0;
+           width: 45rem;
+           top: 43rem;
+        }
+        @include xl{
+            position: absolute;
+            margin: 0;
+            padding: 2.8rem 0 0 2.8rem;
+            background-color: white;
+            right: 0;
+            width: 45rem;
+            top: calc(100vh - 280px);
+        }
         .h1-title{
             font-size: 4rem;
             line-height: 4.2rem;
@@ -26,6 +49,9 @@
             outline: none;
             border: hidden;
             cursor: pointer;
+            @include sm{
+              transform: translateY(-12px);
+            }
             &:hover{
                 background-color: $M3;
                 transition: 1s;
