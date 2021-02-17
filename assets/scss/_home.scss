@@ -1,6 +1,4 @@
 #home {
-
-
     .home__image{
         height: 40rem;
         background-image: url("../images/main.jpg");
@@ -49,6 +47,7 @@
             outline: none;
             border: hidden;
             cursor: pointer;
+            letter-spacing: 0.2rem;
             @include sm{
               transform: translateY(-12px);
             }

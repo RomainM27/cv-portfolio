@@ -7,16 +7,20 @@
   font-weight: normal;
   font-family: 'Public Sans', sans-serif;
 }
-
+@import "variable";
 html{
     font-size: 62.5%;
+}
+body{
+  color:$M1;
 }
 
 .container {
   margin: 0 3.2rem
 }
-@import "variable";
+
 
 @import "header";
 @import "hamburger-menu";
 @import "home";
+@import "about";

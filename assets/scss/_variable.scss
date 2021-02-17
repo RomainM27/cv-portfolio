@@ -2,6 +2,20 @@ $M1 :#33323d;
 $M2:#203A4c;
 $M3: #5fb4a2;
 
+@mixin h2 {
+   font-size: 3rem;
+   font-weight: bold;
+   color: $M1;
+   opacity: 0.9;
+   text-align: center;
+}
+
+@mixin h3 {
+   font-size: 2.5rem;
+   opacity: 0.8;
+   padding: 2rem 0 2rem 0;
+}
+
 
 // media queries
 // Small tablets and large smartphones (landscape view)
