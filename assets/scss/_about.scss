@@ -1,6 +1,7 @@
 #about{
     padding: 3.2rem;
     margin-bottom: 5rem;
+    min-height: 100vh;
     .h2-title{
         @include h2();
         margin-top:5rem;

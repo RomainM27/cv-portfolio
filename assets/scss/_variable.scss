@@ -36,32 +36,115 @@ $screen-xl-min: 1200px;
     @media (min-width: #{$screen-sm-min}) {
         @content;
     }
- }
+}
+
+// Medium devices
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+      @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+      @content;
+   }
+}
+
+// Extra large devices
+@mixin xl {
+   @media (min-width: #{$screen-xl-min}) {
+      @content;
+   }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+   @media (min-width: $screen+'px' ) {
+      @content;
+   }
+}
+
+
+// animation on button
+@mixin button-anime{
+   position: relative;
+   display: inline-block;
+   overflow: hidden;
+   &::before,&::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
+   span{
+      display: block;
+      position: relative;
+   }
+   & > span{
+      overflow: hidden;
+   }
+   & > span > span {
+      overflow: hidden;
+   }
+   &:hover > span > span{
+      animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+      color: white;
+   }
+   @keyframes MoveUpInitial {
+      to {
+         transform: translate3d(0,-105%,0);
+      }
+   }
+   
+   @keyframes MoveUpEnd {
+      from {
+         transform: translate3d(0,100%,0);
+      }
+      to {
+         transform: translate3d(0,0,0);
+      }
+   }
+   &::before{
+      content: '';
+      background: $BG2;
+      transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+      transform-origin: 100% 50%;
+   }
+   &:hover::before{
+      transform: scale3d(0,1,1);
+      transform-origin: 0% 50%;
+   }
+}
+
+
+// animation on link
+@mixin link-above{
+
+   &::before,&::after {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $M3;
+      top: 100%;
+      left: 0;
+      pointer-events: none;
+   }
+
+   &::before {
+      content: '';
+      /* show by default */
+   }
+   &::before {
+      transform-origin: 100% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: transform 0.3s;
+  }
   
- // Medium devices
- @mixin md {
-    @media (min-width: #{$screen-md-min}) {
-        @content;
-    }
- }
-  
- // Large devices
- @mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
-        @content;
-    }
- }
-  
- // Extra large devices
- @mixin xl {
-    @media (min-width: #{$screen-xl-min}) {
-        @content;
-    }
- }
-  
- // Custom devices
- @mixin rwd($screen) {
-    @media (min-width: $screen+'px' ) {
-       @content;
-    }
- }
+   &:hover::before {
+      transform-origin: 0% 50%;
+      transform: scale3d(1, 1, 1);
+  }
+}

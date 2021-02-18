@@ -2,6 +2,7 @@
     background-color: #ffffff;
     padding: 3.2rem;
     padding-bottom: 5rem;
+    min-height: 100vh;
     .h2-title{
         @include h2();
         margin-top:5rem;

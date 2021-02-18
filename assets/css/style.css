@@ -21,6 +21,10 @@ body {
   margin: 0 3.2rem;
 }
 
+.active {
+  color: #5fb4a2 !important;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -30,6 +34,7 @@ header {
   padding: 3.2rem;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  background-color: rgba(0, 0, 0, 0.308);
 }
 
 @media (min-width: 600px) {
@@ -108,6 +113,39 @@ header nav ul li a:hover {
   font-weight: bold;
 }
 
+header nav ul li a::before, header nav ul li a::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #5fb4a2;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+header nav ul li a::before {
+  content: '';
+  /* show by default */
+}
+
+header nav ul li a::before {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+header nav ul li a:hover::before {
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
 .mobile {
   z-index: 200;
   position: fixed;
@@ -125,6 +163,7 @@ header nav ul li a:hover {
 }
 
 .mobile li a {
+  position: relative;
   color: white;
   text-decoration: none;
   font-size: 2rem;
@@ -132,6 +171,39 @@ header nav ul li a:hover {
 
 .mobile li a:hover {
   font-weight: bold;
+}
+
+.mobile li a::before, .mobile li a::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #5fb4a2;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.mobile li a::before {
+  content: '';
+  /* show by default */
+}
+
+.mobile li a::before {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.mobile li a:hover::before {
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
 }
 
 .mobile_menu-bg {
@@ -417,6 +489,7 @@ header nav ul li a:hover {
 #about {
   padding: 3.2rem;
   margin-bottom: 5rem;
+  min-height: 100vh;
 }
 
 #about .h2-title {
@@ -734,23 +807,101 @@ header nav ul li a:hover {
   letter-spacing: 2px;
   padding: 1.5rem 3rem;
   margin-bottom: 2rem;
-  background-color: #e6e6e6;
+  background-color: #203A4c;
   color: #203A4c;
   border: 1px solid #203A4c;
   cursor: pointer;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 
-#projects .projects__project .project-content .project-view:hover {
-  background-color: #203A4c;
+#projects .projects__project .project-content .project-view::before, #projects .projects__project .project-content .project-view::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#projects .projects__project .project-content .project-view span {
+  display: block;
+  position: relative;
+}
+
+#projects .projects__project .project-content .project-view > span {
+  overflow: hidden;
+}
+
+#projects .projects__project .project-content .project-view > span > span {
+  overflow: hidden;
+}
+
+#projects .projects__project .project-content .project-view:hover > span > span {
+  -webkit-animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+          animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
   color: white;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+}
+
+@-webkit-keyframes MoveUpInitial {
+  to {
+    -webkit-transform: translate3d(0, -105%, 0);
+            transform: translate3d(0, -105%, 0);
+  }
+}
+
+@keyframes MoveUpInitial {
+  to {
+    -webkit-transform: translate3d(0, -105%, 0);
+            transform: translate3d(0, -105%, 0);
+  }
+}
+
+@-webkit-keyframes MoveUpEnd {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes MoveUpEnd {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+#projects .projects__project .project-content .project-view::before {
+  content: '';
+  background: #e6e6e6;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+#projects .projects__project .project-content .project-view:hover::before {
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
 }
 
 #contact {
   background-color: #ffffff;
   padding: 3.2rem;
   padding-bottom: 5rem;
+  min-height: 100vh;
 }
 
 #contact .h2-title {
@@ -863,6 +1014,7 @@ header nav ul li a:hover {
 footer {
   padding: 5rem 3.2rem;
   background-color: #33323d;
+  margin-top: 10rem;
 }
 
 footer .footer__icons {
