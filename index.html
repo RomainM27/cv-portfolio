@@ -46,15 +46,12 @@
             <li><a href="">Contact</a></li>
         </ul>
         <div class="mobile_menu-bg"></div>
-
-
         <section id="home">
             <div class="home__image"></div>
             <div class="home__content">
                 <h1 class="h1-title">Hello, I'm Romain Mathieu and I love building beautiful websites</h1>
                 <button> ABOUT ME</button>
             </div>
-
         </section>
         <section id="about">
             <h2 class="h2-title">About Me</h2>
@@ -120,6 +117,26 @@
                             </span>
                         </li>
                         <li>
+                            <span class="skillAbility">WordPress</span>
+                            <span class="skillAbility-score">
+                                <span class="AS-star-ok"></span>
+                                <span class="AS-star-notok"></span>
+                                <span class="AS-star-notok"></span>
+                                <span class="AS-star-notok"></span>
+                                <span class="AS-star-notok"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skillAbility">Php</span>
+                            <span class="skillAbility-score">
+                                <span class="AS-star-ok"></span>
+                                <span class="AS-star-notok"></span>
+                                <span class="AS-star-notok"></span>
+                                <span class="AS-star-notok"></span>
+                                <span class="AS-star-notok"></span>
+                            </span>
+                        </li>
+                        <li>
                             <span class="skillAbility">PostgreSQL</span>
                             <span class="skillAbility-score">
                                 <span class="AS-star-ok"></span>
@@ -143,8 +160,87 @@
                 </div>
             </div>
         </section>
+        <section id="projects">
+            <h2 class="h2-title">Projects</h2>
+            <hr>
+            <div class="projects__project project--right">
+                <img src="./assets/images/foodtruck-restaurant.png" alt="foodtruck-restaurant">
+                <div class="project-content pr">
+                    <h3>Foodtruck BeCode</h3>
+                    <p>This was a 5 pages project. The site must be responsive, with sass and bootstrap. It was my first
+                        project in a group, so the challenge was to cooperate. (I just have done the header/footer and
+                        the contact page) </p>
+                    <button
+                        onclick="window.location.href='https://stephane-englebert.github.io/restaurant-css-framework/'"
+                        class="project-view" type="button">VIEW PROJECT</button>
+                </div>
+            </div>
+            <div class="projects__project project--left">
+                <img src="./assets/images/foodtruck-restaurant.png" alt="foodtruck-restaurant">
+                <div class="project-content pl">
+                    <h3>Exemple</h3>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        labo"</p>
+                    <button class="project-view" type="button">VIEW PROJECT</button>
+                </div>
+            </div>
+            <div class="projects__project project--right">
+                <img src="./assets/images/hangman.png" alt="foodtruck-restaurant">
+                <div class="project-content pr">
+                    <h3>Hangman</h3>
+                    <p>This was a 2 days solo projects at BeCode, the objective was to train our Pure JavaScript skill
+                        and our skill to interact with the DOM. (The project is not responsive).
+                        I have use for this project some canvas, sass, basic JavaScript and the
+                        libraries of GSAP.</p>
+                    <button onclick="window.location.href='https://romainm27.github.io/Hangman/'" class="project-view"
+                        type="button">VIEW PROJECT</button>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="h2-title">Contact</h2>
+            <hr>
+            <h4>Have a question or want to aske me something ?</h4>
+            <form action="">
+                <div class="wrapper">
+                    <div class="input-data">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label>Name :</label>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="input-data">
+                        <input type="email" required>
+                        <div class="underline"></div>
+                        <label>Email :</label>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="input-data">
+                        <textarea required></textarea>
+                        <div class="underline"></div>
+                        <label>Message :</label>
+                    </div>
+                </div>
+            </form>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer__icons">
+            <a class="icon" href="https://github.com/RomainM27">
+                <div class="icon-github"></div>
+            </a>
+            <a class="icon" href="https://linkedin.com/in/romain-mathieu27">
+                <div class="icon-linkedin"></div>
+            </a>
+            <a class="icon" href="">
+                <div class="icon-badge"></div>
+            </a>
+        </div>
+        <div class="footer__note">MATHIEU ROMAIN <span>©2021</span></div>
+    </footer>
 
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/hamburger.js"></script>

@@ -1,0 +1,51 @@
+footer{
+    padding: 5rem 3.2rem;
+    background-color: $M1;
+
+    .footer__icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon{
+            width: 5.5rem;
+            height: 5.5rem;
+            padding: 1.5rem;
+            background-color: #444352;
+            margin: 2rem;
+            border-radius: 10%;
+            &:hover{
+                transition: 0.6s;
+                transform: scale(0.9);
+                background-color: $M3;
+            }
+            .icon-github{
+                background: url("../images/footersvg/iconmonstr-github-1.svg");
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+            .icon-linkedin{
+                background: url("../images/footersvg/iconmonstr-linkedin-1.svg");
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+            .icon-badge{
+                background: url("../images/footersvg/iconmonstr-award-5.svg");
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .footer__note{
+        color: white;
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 1.4rem;
+        opacity: 0.6;
+        span{
+            color: $M3;
+        }
+    }
+}
