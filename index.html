@@ -12,6 +12,14 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Portfolio Romain</title>
+    <!-- email api-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_wjYurcEq6msfOuD9HerB5");
+        })();
+    </script>
 </head>
 
 <body>
@@ -207,29 +215,31 @@
         <section id="contact">
             <h2 class="h2-title">Contact</h2>
             <hr>
-            <h3>Have a question or want to aske me something ?</h3>
-            <form action="">
+            <h3>Have a question or want to ask me something ?</h3>
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
                 <div class="wrapper">
                     <div class="input-data">
-                        <input type="text" required>
+                        <input id="name" name="name" type="text" required>
                         <div class="underline"></div>
-                        <label>Name :</label>
+                        <label for="name">Name :</label>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="input-data">
-                        <input type="email" required>
+                        <input id="email" name="email" type="email" required>
                         <div class="underline"></div>
-                        <label>Email :</label>
+                        <label for="email">Email :</label>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="input-data">
-                        <textarea required></textarea>
+                        <textarea id="msg" name="msg" maxlength="300" required></textarea>
                         <div class="underline"></div>
-                        <label>Message :</label>
+                        <label id="textarea" for="msg">Message :</label>
                     </div>
                 </div>
+                <input class="submit" type="submit" value="SUBMIT"></input>
             </form>
         </section>
     </main>
@@ -249,6 +259,7 @@
     </footer>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/hamburger.js"></script>
+    <script src="./assets/js/email.js"></script>
 </body>
 
 </html>

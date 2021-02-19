@@ -903,6 +903,7 @@ header nav ul li a:hover::before {
   padding: 3.2rem;
   padding-bottom: 5rem;
   min-height: 100vh;
+  position: relative;
 }
 
 #contact .h2-title {
@@ -937,10 +938,11 @@ header nav ul li a:hover::before {
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   max-width: 50rem;
-  padding: 0 2rem 5rem 2rem;
-  margin: 5rem auto;
+  padding: 2rem 2rem 7rem 2rem;
+  margin: 10rem auto;
   background-color: white;
-  height: 40rem;
+  height: 50rem;
+  position: relative;
 }
 
 #contact form .wrapper {
@@ -1005,12 +1007,16 @@ header nav ul li a:hover::before {
 #contact form .wrapper .input-data label {
   font-size: 1.5rem;
   position: absolute;
-  bottom: 2rem;
-  left: 0;
+  bottom: 2.5rem;
+  left: 3px;
   color: #33323d;
   pointer-events: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+#contact form .wrapper .input-data #textarea {
+  bottom: 2rem;
 }
 
 #contact form .wrapper .input-data textarea {
@@ -1021,6 +1027,7 @@ header nav ul li a:hover::before {
   color: #33323d;
   opacity: 0.7;
   padding: 1rem;
+  resize: none;
 }
 
 #contact form .wrapper .input-data textarea:focus {
@@ -1031,6 +1038,39 @@ header nav ul li a:hover::before {
   -webkit-transform: translateY(-22px);
           transform: translateY(-22px);
   font-size: 2rem;
+  color: #5fb4a2;
+}
+
+#contact form .submit {
+  letter-spacing: 2px;
+  padding: 1.5rem 3rem;
+  background-color: #203A4c;
+  color: white;
+  border: 1px solid #203A4c;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5%;
+  left: 30px;
+  outline: none;
+}
+
+@media (min-width: 600px) {
+  #contact form .submit {
+    left: 69%;
+  }
+}
+
+#contact form .submit:hover {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  background-color: #5fb4a2;
+  border-color: #5fb4a2;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#contact form .submit:active {
+  background-color: white;
   color: #5fb4a2;
 }
 

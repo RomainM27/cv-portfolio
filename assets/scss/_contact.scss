@@ -3,6 +3,7 @@
     padding: 3.2rem;
     padding-bottom: 5rem;
     min-height: 100vh;
+    position: relative;
     .h2-title{
         @include h2();
         margin-top:5rem;
@@ -26,10 +27,11 @@
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         //box-shadow: 5px 1px 20px rgba(0,0,0,0.1);
         max-width: 50rem;
-        padding: 0 2rem 5rem 2rem;
-        margin: 5rem auto;
+        padding: 2rem 2rem 7rem 2rem;
+        margin: 10rem auto;
         background-color: white;
-        height: 40rem;
+        height: 50rem;
+        position: relative;
         .wrapper{
             padding: 2rem 1rem;
             .input-data{
@@ -76,11 +78,14 @@
                 label{
                     font-size: 1.5rem;
                     position: absolute;
-                    bottom: 2rem;
-                    left: 0;
+                    bottom: 2.5rem;
+                    left: 3px;
                     color: $M1;
                     pointer-events: none;
                     transition: all 0.3s ease;
+                }
+                #textarea{
+                    bottom: 2rem;
                 }
                 textarea{
                     height: 20rem;
@@ -90,6 +95,7 @@
                     color: $M1;
                     opacity: 0.7;
                     padding: 1rem;
+                    resize: none;
                     &:focus{
                         outline: none;
                     }
@@ -100,6 +106,31 @@
                     }
 
                 }
+            }
+        }
+        .submit{
+            letter-spacing: 2px;
+            padding: 1.5rem 3rem;
+            background-color: $M2;
+            color: white;
+            border: 1px solid $M2;
+            cursor: pointer;
+            position: absolute;
+            bottom: 5%;
+            left: 30px;
+            outline: none;
+            @include sm{
+                left: 69%; 
+            }
+            &:hover{
+                transition: 0.6s;
+                background-color: $M3;
+                border-color: $M3;
+                transform: scale(0.9);
+            }
+            &:active{
+                background-color: white;
+                color: $M3;
             }
         }
     }
