@@ -645,6 +645,7 @@ header nav ul li a:hover::before {
   background-color: #e6e6e6;
   padding: 3.2rem;
   padding-bottom: 5rem;
+  min-height: 100vh;
 }
 
 #projects .h2-title {
@@ -924,7 +925,7 @@ header nav ul li a:hover::before {
   }
 }
 
-#contact h4 {
+#contact h3 {
   color: #5fb4a2;
   font-size: 2rem;
   opacity: 0.8;
@@ -939,6 +940,7 @@ header nav ul li a:hover::before {
   padding: 0 2rem 5rem 2rem;
   margin: 5rem auto;
   background-color: white;
+  height: 40rem;
 }
 
 #contact form .wrapper {
@@ -951,7 +953,7 @@ header nav ul li a:hover::before {
   position: relative;
 }
 
-#contact form .wrapper .input-data input, #contact form .wrapper .input-data textarea {
+#contact form .wrapper .input-data input {
   height: 100%;
   width: 100%;
   border: none;
@@ -961,18 +963,18 @@ header nav ul li a:hover::before {
   opacity: 0.7;
 }
 
-#contact form .wrapper .input-data input:focus, #contact form .wrapper .input-data textarea:focus {
+#contact form .wrapper .input-data input:focus {
   outline: none;
 }
 
-#contact form .wrapper .input-data input:focus ~ label, #contact form .wrapper .input-data input:valid ~ label, #contact form .wrapper .input-data textarea:focus ~ label, #contact form .wrapper .input-data textarea:valid ~ label {
+#contact form .wrapper .input-data input:focus ~ label, #contact form .wrapper .input-data input:valid ~ label {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   font-size: 2rem;
   color: #5fb4a2;
 }
 
-#contact form .wrapper .input-data input:focus ~ .underline:before, #contact form .wrapper .input-data input:valid ~ .underline:before, #contact form .wrapper .input-data textarea:focus ~ .underline:before, #contact form .wrapper .input-data textarea:valid ~ .underline:before {
+#contact form .wrapper .input-data input:focus ~ .underline:before, #contact form .wrapper .input-data input:valid ~ .underline:before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -1003,12 +1005,33 @@ header nav ul li a:hover::before {
 #contact form .wrapper .input-data label {
   font-size: 1.5rem;
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   left: 0;
   color: #33323d;
   pointer-events: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+#contact form .wrapper .input-data textarea {
+  height: 20rem;
+  width: 100%;
+  font-size: 1.6rem;
+  border: 1px solid #33323d;
+  color: #33323d;
+  opacity: 0.7;
+  padding: 1rem;
+}
+
+#contact form .wrapper .input-data textarea:focus {
+  outline: none;
+}
+
+#contact form .wrapper .input-data textarea:focus ~ label, #contact form .wrapper .input-data textarea:valid ~ label {
+  -webkit-transform: translateY(-22px);
+          transform: translateY(-22px);
+  font-size: 2rem;
+  color: #5fb4a2;
 }
 
 footer {
