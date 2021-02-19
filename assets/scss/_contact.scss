@@ -111,25 +111,24 @@
         .submit{
             letter-spacing: 2px;
             padding: 1.5rem 3rem;
-            background-color: $M2;
+            background-color: #e31b6ede;
             color: white;
-            border: 1px solid $M2;
+            border: 1px solid #e31b6d;
             cursor: pointer;
             position: absolute;
             bottom: 5%;
             left: 30px;
             outline: none;
             @include sm{
-                left: 69%; 
+                left: 61%; 
             }
             &:hover{
                 transition: 0.6s;
-                background-color: $M3;
-                border-color: $M3;
+                background-color: white;
+                color: #e31b6ede;
                 transform: scale(0.9);
             }
             &:active{
-                background-color: white;
                 color: $M3;
             }
         }

@@ -415,14 +415,13 @@ header nav ul li a:hover::before {
 
 #home .home__image {
   height: 40rem;
-  background-image: url("../images/arrière-plan.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: no-repeat url("../images/arrière-plan-gsm.png");
 }
 
 @media (min-width: 600px) {
   #home .home__image {
     height: 70rem;
+    background: no-repeat center center fixed url("../images/arrière-plan.png");
   }
 }
 
@@ -433,16 +432,13 @@ header nav ul li a:hover::before {
 }
 
 #home .home__content {
-  margin: 3.2rem;
+  padding: 5rem 3.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -451,17 +447,17 @@ header nav ul li a:hover::before {
 
 @media (min-width: 600px) {
   #home .home__content {
-    margin: 0;
-    padding: 2.8rem 0 0 2.8rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  #home .home__content {
-    margin-right: 20%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     top: 38%;
-    right: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
 
@@ -471,8 +467,6 @@ header nav ul li a:hover::before {
   letter-spacing: -0.36px;
   font-weight: bold;
   font-family: 'Ibarra Real Nova', serif;
-  color: white;
-  text-align: center;
 }
 
 #home .home__content .h1-title span {
@@ -480,21 +474,29 @@ header nav ul li a:hover::before {
   font-family: 'Ibarra Real Nova', serif;
 }
 
+@media (min-width: 600px) {
+  #home .home__content .h1-title {
+    color: white;
+    min-width: 60rem;
+    text-align: center;
+  }
+}
+
 #home .home__content button {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #203A4c;
   color: white;
   margin-top: 4rem;
   padding: 1.5rem 3rem;
   outline: none;
-  border: 1px solid white;
+  border: 1px solid #33323d;
   cursor: pointer;
   letter-spacing: 0.2rem;
 }
 
 @media (min-width: 600px) {
   #home .home__content button {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
@@ -1063,9 +1065,9 @@ header nav ul li a:hover::before {
 #contact form .submit {
   letter-spacing: 2px;
   padding: 1.5rem 3rem;
-  background-color: #203A4c;
+  background-color: #e31b6ede;
   color: white;
-  border: 1px solid #203A4c;
+  border: 1px solid #e31b6d;
   cursor: pointer;
   position: absolute;
   bottom: 5%;
@@ -1075,21 +1077,20 @@ header nav ul li a:hover::before {
 
 @media (min-width: 600px) {
   #contact form .submit {
-    left: 69%;
+    left: 61%;
   }
 }
 
 #contact form .submit:hover {
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  background-color: #5fb4a2;
-  border-color: #5fb4a2;
+  background-color: white;
+  color: #e31b6ede;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
 #contact form .submit:active {
-  background-color: white;
   color: #5fb4a2;
 }
 
