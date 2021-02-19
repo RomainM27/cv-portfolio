@@ -1,8 +1,8 @@
 #home {
+    position: relative;
     .home__image{
         height: 40rem;
-        background-image: url("../images/main.jpg");
-        background-repeat: no-repeat;
+        background-image: url("../images/arrière-plan.png");        background-repeat: no-repeat;
         background-size: cover;
         @include sm{
             height: 70rem;
@@ -13,23 +13,21 @@
     }
     .home__content{
         margin: 3.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         @include sm{
-           position: absolute;
            margin: 0;
            padding: 2.8rem 0 0 2.8rem;
-           background-color: white;
-           right: 0;
-           width: 45rem;
-           top: 43rem;
+
+
         }
         @include xl{
+            margin-right: 20%;
             position: absolute;
-            margin: 0;
-            padding: 2.8rem 0 0 2.8rem;
-            background-color: white;
+            top: 38%;
             right: 0;
-            width: 45rem;
-            top: calc(100vh - 280px);
         }
         .h1-title{
             font-size: 4rem;
@@ -37,15 +35,20 @@
             letter-spacing: -0.36px;
             font-weight: bold;
             font-family: 'Ibarra Real Nova', serif;
-            color: $M1;
+            color: white;
+            text-align: center;
+            span{
+                color: #e31b6d;
+                font-family: 'Ibarra Real Nova', serif;
+            }
         }
         button{
-            background-color: $M2;
+            background-color: rgba(255, 255, 255, 0);
             color: white;
             margin-top: 4rem;
             padding:1.5rem 3rem;
             outline: none;
-            border: hidden;
+            border: 1px solid white;
             cursor: pointer;
             letter-spacing: 0.2rem;
             @include sm{
@@ -54,6 +57,7 @@
             &:hover{
                 background-color: $M3;
                 transition: 1s;
+                border: 1px solid $M3;
             }
             
         }

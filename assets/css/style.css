@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -34,7 +35,6 @@ header {
   padding: 3.2rem;
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  background-color: rgba(0, 0, 0, 0.308);
 }
 
 @media (min-width: 600px) {
@@ -73,6 +73,10 @@ header nav .logo__header {
   position: relative;
 }
 
+header nav .logo__header svg path {
+  fill: white;
+}
+
 header nav ul {
   position: relative;
   display: none;
@@ -106,7 +110,6 @@ header nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 2rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 header nav ul li a:hover {
@@ -406,9 +409,13 @@ header nav ul li a:hover::before {
   }
 }
 
+#home {
+  position: relative;
+}
+
 #home .home__image {
   height: 40rem;
-  background-image: url("../images/main.jpg");
+  background-image: url("../images/arrière-plan.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -427,29 +434,34 @@ header nav ul li a:hover::before {
 
 #home .home__content {
   margin: 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 600px) {
   #home .home__content {
-    position: absolute;
     margin: 0;
     padding: 2.8rem 0 0 2.8rem;
-    background-color: white;
-    right: 0;
-    width: 45rem;
-    top: 43rem;
   }
 }
 
 @media (min-width: 1200px) {
   #home .home__content {
+    margin-right: 20%;
     position: absolute;
-    margin: 0;
-    padding: 2.8rem 0 0 2.8rem;
-    background-color: white;
+    top: 38%;
     right: 0;
-    width: 45rem;
-    top: calc(100vh - 280px);
   }
 }
 
@@ -459,16 +471,22 @@ header nav ul li a:hover::before {
   letter-spacing: -0.36px;
   font-weight: bold;
   font-family: 'Ibarra Real Nova', serif;
-  color: #33323d;
+  color: white;
+  text-align: center;
+}
+
+#home .home__content .h1-title span {
+  color: #e31b6d;
+  font-family: 'Ibarra Real Nova', serif;
 }
 
 #home .home__content button {
-  background-color: #203A4c;
+  background-color: rgba(255, 255, 255, 0);
   color: white;
   margin-top: 4rem;
   padding: 1.5rem 3rem;
   outline: none;
-  border: hidden;
+  border: 1px solid white;
   cursor: pointer;
   letter-spacing: 0.2rem;
 }
@@ -484,6 +502,7 @@ header nav ul li a:hover::before {
   background-color: #5fb4a2;
   -webkit-transition: 1s;
   transition: 1s;
+  border: 1px solid #5fb4a2;
 }
 
 #about {
