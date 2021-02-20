@@ -551,7 +551,7 @@ header nav ul li a:hover::before {
 
 @media (min-width: 768px) {
   #about hr {
-    max-width: 40rem;
+    max-width: 30rem;
   }
 }
 
@@ -707,7 +707,7 @@ header nav ul li a:hover::before {
 
 @media (min-width: 768px) {
   #projects hr {
-    max-width: 40rem;
+    max-width: 30rem;
   }
 }
 
@@ -965,7 +965,7 @@ header nav ul li a:hover::before {
 
 @media (min-width: 768px) {
   #contact hr {
-    max-width: 40rem;
+    max-width: 30rem;
   }
 }
 
