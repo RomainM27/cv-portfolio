@@ -12,10 +12,13 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Portfolio Romain</title>
     <!-- email api-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
+    <!-- libraries-->
     <script type="text/javascript">
         (function () {
             emailjs.init("user_wjYurcEq6msfOuD9HerB5");
@@ -65,16 +68,16 @@
             </div>
         </section>
         <section id="about">
-            <h2 class="h2-title">About Me</h2>
-            <hr>
-            <div class="aboutContent">
+            <h2 class="h2-title" data-aos="fade-up">About Me</h2>
+            <hr data-aos="fade-up">
+            <div class="aboutContent" data-aos="fade-right">
                 <div class="about__info">
                     <img src="./assets/images/romain1.jpg" alt="Romain picture">
                     <h3>Who's this guy?</h3>
                     <p>I'm a junior Font-End Developper. I'm a doing a intensive training at BeCode (Web Developer). I'm
                         also in 2nd year of bachelor in IT management.</p>
                 </div>
-                <div class="about__skill">
+                <div class="about__skill" data-aos="fade-left">
                     <h3>Skill</h3>
                     <ul class="about__listSkill">
                         <li>
@@ -212,8 +215,8 @@
             </div>
         </section>
         <section id="projects">
-            <h2 class="h2-title">Projects</h2>
-            <hr>
+            <h2 class="h2-title" data-aos="fade-up">Projects</h2>
+            <hr data-aos="fade-up">
             <div class="projects__project project--right">
                 <img src="./assets/images/foodtruck-restaurant.png" alt="foodtruck-restaurant">
                 <div class="project-content pr">
@@ -256,10 +259,10 @@
             </div>
         </section>
         <section id="contact">
-            <h2 class="h2-title">Contact</h2>
-            <hr>
-            <h3>Have a question or want to ask me something ?</h3>
-            <form id="contact-form">
+            <h2 class="h2-title" data-aos="fade-up">Contact</h2>
+            <hr data-aos="fade-up">
+            <h3 data-aos="fade-up">Have a question or want to ask me something ?</h3>
+            <form id="contact-form" data-aos="zoom-out-up">
                 <input type="hidden" name="contact_number">
                 <div class="wrapper">
                     <div class="input-data">
@@ -304,6 +307,12 @@
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/hamburger.js"></script>
     <script src="./assets/js/email.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript">
+        AOS.init({
+            duration: 1000
+        });
+    </script>
 </body>
 
 </html>

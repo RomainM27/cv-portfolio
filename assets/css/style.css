@@ -519,6 +519,7 @@ header nav ul li a:hover::before {
 }
 
 #home .home__content a span {
+  margin-left: 1rem;
   position: relative;
   display: inline-block;
   width: 13px;
