@@ -26,6 +26,10 @@ body {
   color: #5fb4a2 !important;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -974,14 +978,19 @@ header nav ul li a:hover::before {
 }
 
 #contact form {
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  max-width: 50rem;
-  padding: 2rem 2rem 7rem 2rem;
   margin: 10rem auto;
   background-color: white;
-  height: 50rem;
+  height: 55rem;
   position: relative;
+}
+
+@media (min-width: 600px) {
+  #contact form {
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    max-width: 60rem;
+    padding: 4rem 4rem 7rem 4rem;
+  }
 }
 
 #contact form .wrapper {
@@ -1088,14 +1097,15 @@ header nav ul li a:hover::before {
   border: 1px solid #e31b6d;
   cursor: pointer;
   position: absolute;
-  bottom: 5%;
-  left: 30px;
+  bottom: 15%;
+  left: 12px;
   outline: none;
 }
 
 @media (min-width: 600px) {
   #contact form .submit {
-    left: 61%;
+    bottom: 8%;
+    left: 64%;
   }
 }
 
@@ -1110,6 +1120,23 @@ header nav ul li a:hover::before {
 
 #contact form .submit:active {
   color: #5fb4a2;
+}
+
+#contact form p {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #00c000;
+  position: absolute;
+  bottom: 27%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 600px) {
+  #contact form p {
+    bottom: 20%;
+  }
 }
 
 footer {

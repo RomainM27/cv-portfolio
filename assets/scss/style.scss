@@ -23,6 +23,10 @@ body{
   color: $M3 !important;
 }
 
+.hidden{
+  display:none;
+}
+
 @import "header";
 @import "hamburger-menu";
 @import "home";

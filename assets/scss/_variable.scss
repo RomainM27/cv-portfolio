@@ -132,7 +132,6 @@ $screen-xl-min: 1200px;
       left: 0;
       pointer-events: none;
    }
-
    &::before {
       content: '';
       /* show by default */
@@ -142,7 +141,6 @@ $screen-xl-min: 1200px;
       transform: scale3d(0, 1, 1);
       transition: transform 0.3s;
   }
-  
    &:hover::before {
       transform-origin: 0% 50%;
       transform: scale3d(1, 1, 1);
