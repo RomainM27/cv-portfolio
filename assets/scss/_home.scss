@@ -42,15 +42,17 @@
                 text-align: center;
             }
         }
-        button{
+        a{
             background-color: $M2;
             color: white;
             margin-top: 3rem;
             padding:1.5rem 3rem;
             outline: none;
+            text-decoration: none;
             border: 1px solid $M1;
             cursor: pointer;
             letter-spacing: 0.2rem;
+            font:400 13.3333px Arial;
             @include sm{
                 border-color: white;
                 background-color: rgba(255, 255, 255, 0);
@@ -59,8 +61,22 @@
                 background-color: $M3;
                 transition: 1s;
                 border: 1px solid $M3;
+
             }
-            
+            &:hover > span{
+                transition: 0.6s;
+                transform: translateY(2px) translateX(3px) rotateZ(90deg);
+
+            }
+            span{
+                position: relative;                
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                background-image: url("../images/iconmonstr-arrow-20.svg");
+                background-repeat: no-repeat;
+                transform: translateY(2px) translateX(3px);
+            }
         }
     }
 }
