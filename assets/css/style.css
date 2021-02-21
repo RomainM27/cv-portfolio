@@ -12,10 +12,14 @@
 
 html {
   font-size: 62.5%;
+  width: 100%;
+  overflow-x: hidden !important;
 }
 
 body {
   color: #33323d;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {

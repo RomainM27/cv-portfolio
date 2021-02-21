@@ -10,9 +10,13 @@
 @import "variable";
 html{
     font-size: 62.5%;
+    width:100%;
+    overflow-x:hidden !important;
 }
 body{
   color:$M1;
+  width:100%;
+  overflow-x:hidden;
 }
 
 .container {
