@@ -23,7 +23,6 @@
         text-align: center;
     }
     form{
-
         margin: 10rem auto;
         background-color: white;
         height: 55rem;
@@ -135,11 +134,11 @@
         p{
             font-size: 1.6rem;
             font-style: italic;
+            width: 85%;
+            text-align: center;
             color:rgb(0, 192, 0);
             position: absolute;
             bottom: 27%;
-            left: 50%;
-            transform: translateX(-50%);
             @include sm{
                 bottom: 20%;
             }
