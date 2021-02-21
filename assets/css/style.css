@@ -274,22 +274,22 @@ header nav ul li a:hover::before {
           transform: scale(0.9);
 }
 
-.hamburger-button:active .icon i {
+.hamburger-button.active .icon i {
   -webkit-animation-direction: normal;
           animation-direction: normal;
 }
 
-.hamburger-button.animation icon i:nth-child(1), .hamburger-button.animation icon i:nth-child(2) {
+.hamburger-button.animation .icon i:nth-child(1), .hamburger-button.animation .icon i:nth-child(2) {
   -webkit-animation-name: LineHide;
           animation-name: LineHide;
 }
 
-.hamburger-button.animation icon i:nth-child(3) {
+.hamburger-button.animation .icon i:nth-child(3) {
   -webkit-animation-name: ScaleChange, Clockwise;
           animation-name: ScaleChange, Clockwise;
 }
 
-.hamburger-button.animation icon i:nth-child(4) {
+.hamburger-button.animation .icon i:nth-child(4) {
   -webkit-animation-name: ScaleChange, Counterclockwise;
           animation-name: ScaleChange, Counterclockwise;
 }
