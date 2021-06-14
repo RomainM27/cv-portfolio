@@ -7,33 +7,35 @@
   font-weight: normal;
   font-family: 'Public Sans', sans-serif;
 }
-@import "variable";
-html{
-    font-size: 62.5%;
-    width:100%;
+@import 'variable';
+html {
+  font-size: 62.5%;
+  width: 100%;
+  // test
+  scroll-behavior: smooth;
 }
-body{
-  color:$M1;
-  width:100%;
-  overflow-x:hidden;
+body {
+  color: $M1;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
-  margin: 0 3.2rem
+  margin: 0 3.2rem;
 }
 
-.active{
+.active {
   color: $M3 !important;
 }
 
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }
 
-@import "header";
-@import "hamburger-menu";
-@import "home";
-@import "about";
-@import "project";
-@import "contact";
-@import "footer";
+@import 'header';
+@import 'hamburger-menu';
+@import 'home';
+@import 'about';
+@import 'project';
+@import 'contact';
+@import 'footer';
